@@ -24,7 +24,7 @@ InvokeTopBar.OnClientInvoke = function()
     EmotesIcon:setName("Emotes")
     EmotesIcon:setLabel("Emotes")
     EmotesIcon:bindEvent("selected", function()
-        print("Emotes Button Selected edit")
+        print("Emotes Button Pressed")
         EmotesIcon:deselect()
     end)
 
