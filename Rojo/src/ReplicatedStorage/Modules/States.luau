@@ -17,6 +17,11 @@ function module.GiveStates(player:Player)
 	Stunnable.Name = "Stunnable"
 	Stunnable.Parent = States
 	Stunnable.Value = false
+
+	local InAwakeningAnimation = Instance.new("BoolValue")
+	InAwakeningAnimation.Name = "IsAwakening"
+	InAwakeningAnimation.Parent = States
+	InAwakeningAnimation.Value = false
 	
 	local Awakened = Instance.new("BoolValue")
 	Awakened.Name = "Awakened"
