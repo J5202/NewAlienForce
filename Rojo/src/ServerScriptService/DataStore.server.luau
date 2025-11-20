@@ -3,5 +3,6 @@ local DataStoreModule = require(game.ReplicatedStorage.Modules.Utilities.DataSto
 local StyleDataStore = DataStoreModule.NewDataStore("StylesDataStore")
 
 game:GetService("Players").PlayerAdded:Connect(function(player:Player)
+    local StylesKey = "Styles"..player.UserId
     
 end)
