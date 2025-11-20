@@ -20,9 +20,7 @@
         "ChangeStyle": {
           "$className": "RemoteEvent"
         },
-        "RemoveTopbar": {
-          "$className": "RemoteEvent"
-        },
+        
         "$className": "Folder"
       },
       "$path": "src/ReplicatedStorage",
