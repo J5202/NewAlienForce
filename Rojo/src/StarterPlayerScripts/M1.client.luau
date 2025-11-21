@@ -4,10 +4,7 @@ local M1OneAnimId = "rbxassetid://99719359851694"
 local M1TwoAnimId = "rbxassetid://103412070853654"
 local M1ThreeAnimId = "rbxassetid://139782183247884"
 
-local BlockingEvent = game.ReplicatedStorage.RemoteEvents.Blocking
-
 local inputholders = {combostep = 1, lastclicktime = tick(), lasttime = tick(), punchtimegap = tick()}
-local ButtonHold = false
 
 UIS.InputBegan:Connect(function(input:InputObject, gpe:boolean)
 	if gpe then return end

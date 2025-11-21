@@ -105,6 +105,15 @@
       "$properties": {
         "RespectFilteringEnabled": true
       }
-    }
+    },
+    "StarterGui": {
+      "$path": "src/StarterGui",
+      "$ignoreUnknownInstances": true,
+      "MobileMovesGui": {
+        "$className": "ScreenGui",
+        "$ignoreUnknownInstances": true,
+        "$path": "src/StarterGui/MobileMovesGui"
+      }
+    } 
   }
 }
