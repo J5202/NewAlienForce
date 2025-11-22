@@ -6,4 +6,9 @@ if game:GetService("UserInputService").TouchEnabled then
     else
         warn("MobileMovesGui not found in PlayerGui.")
     end
+else
+    if MobileMovesGui then
+        MobileMovesGui.Enabled = false
+        MobileMovesGui:Destroy()
+    end
 end

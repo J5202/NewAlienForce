@@ -2,13 +2,12 @@ local BlockingEvent = game.ReplicatedStorage.RemoteEvents.Blocking
 
 local UserInputService = game:GetService("UserInputService")
 
-local Animator:Animator = game.Players.LocalPlayer.CharacterAdded:Wait():WaitForChild("Humanoid"):WaitForChild("Animator")
-
 UserInputService.InputBegan:Connect(function(input:InputObject, gpe:boolean)
 	if gpe then return end
 	
 	if input.KeyCode == Enum.KeyCode.F then
 		print("Blocking Press")
+		local Animator:Animator = game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("Animator")
 		local IsAwakening = game.Players.LocalPlayer.Character.States.IsAwakening
 		local Stunned = game.Players.LocalPlayer.Character.States.Stunned
 	
@@ -29,6 +28,7 @@ UserInputService.InputEnded:Connect(function(input:InputObject, gpe:boolean)
 	if gpe then return end
 
 	if input.KeyCode == Enum.KeyCode.F then
+		local Animator:Animator = game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("Animator")
 		BlockingEvent:FireServer(false)
 		for i, animation in pairs(Animator:GetPlayingAnimationTracks()) do
 			if animation.Name == "BlockingAnim" then
