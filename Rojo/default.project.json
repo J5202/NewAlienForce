@@ -20,7 +20,11 @@
         "ChangeStyle": {
           "$className": "RemoteEvent"
         },
-        "$className": "Folder"
+        "Move1": {
+          "$className": "RemoteEvent"
+        },
+        "$className": "Folder",
+        "$ignoreUnknownInstances": false
       },
       "$path": "src/ReplicatedStorage",
       "$ignoreUnknownInstances": true,
@@ -53,8 +57,7 @@
         "$ignoreUnknownInstances": true
       },
       "StarterCharacterScripts": {
-        "$path": "src/StarterCharacterScripts",
-        "$ignoreUnknownInstances": true
+        "$path": "src/StarterCharacterScripts"
       },
       "$ignoreUnknownInstances": true
     },
@@ -105,11 +108,6 @@
       "$properties": {
         "RespectFilteringEnabled": true
       }
-    },
-    "StarterGui": {
-      "$className": "StarterGui",
-      "$path": "src/StarterGui",
-      "$ignoreUnknownInstances": true
-    } 
+    }
   }
 }

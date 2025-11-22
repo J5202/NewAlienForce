@@ -15,6 +15,12 @@ InvokeTopBar.OnClientInvoke = function()
         Emotes:destroy()
     end
 
+    local Settings = Icon.getIcon("Settings")
+    if Settings then
+        print("Settings found, destroying...")
+        Settings:destroy()
+    end
+
     local CharacterDropDown = Icon.new()
     CharacterDropDown:setLabel("Characters")
     CharacterDropDown:setDropdown(CharactersList)

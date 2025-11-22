@@ -310,6 +310,7 @@ type Methods = {
 			Passes the given userdata to the icons janitor to be destroyed/disconnected on the icons destruction.
 			If a function is passed, it will be called when the icon is destroyed.
 		]]
+---@diagnostic disable-next-line: undefined-type
 		function(self: Icon, userdata: unknown): Icon
 			return nil :: any
 		end
@@ -461,6 +462,7 @@ type Fields = {
 	notified: Signal,
 }
 
+---@diagnostic disable-next-line: redefined-type
 export type Icon = Methods & StaticFunctions --typeof(setmetatable({} :: Fields, MT))
 
 export type StaticIcon = {
