@@ -22,6 +22,11 @@ function module.GiveStates(player:Player)
 	InAwakeningAnimation.Name = "IsAwakening"
 	InAwakeningAnimation.Parent = States
 	InAwakeningAnimation.Value = false
+
+	local CanReset = Instance.new("BoolValue")
+	CanReset.Name = "CanReset"
+	CanReset.Parent = States
+	CanReset.Value = true
 	
 	local Awakened = Instance.new("BoolValue")
 	Awakened.Name = "Awakened"

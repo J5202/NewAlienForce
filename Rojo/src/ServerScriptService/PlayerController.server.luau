@@ -29,7 +29,6 @@ end)
 
 ChangeStyle.OnServerEvent:Connect(function(player:Player, StyleValue:string)
 	local Style = player:WaitForChild("Style", 0.02)
-	player:LoadCharacter()
 	if Style then
 		Style.Value = StyleValue
 		print("Setting Style to ", StyleValue, " for player ", player.Name)

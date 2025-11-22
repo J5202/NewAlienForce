@@ -8,16 +8,7 @@ UIS.InputBegan:Connect(function(input, gameProcessed)
     if gameProcessed then return end
 
     if input.KeyCode == Enum.KeyCode.One then
-        if Move1Debounce == false then 
-
-            Move1Debounce = true
-            print("Firing Move1Event")
-            Move1Event:FireServer(Move1Time)
-            Move1Time = tick()
-            task.delay(1, function()
-                Move1Debounce = false
-            end)
-
-        end
+        Move1Event:FireServer(Move1Time)
+        Move1Time = tick()         
     end
 end)

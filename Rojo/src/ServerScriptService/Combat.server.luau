@@ -17,6 +17,5 @@ end)
 
 Move1Event.OnServerEvent:Connect(function(player, Move1Time)
 	local Style = player:FindFirstChild("Style").Value
-	print("Player Style: "..Style)
 	MovesetsMain.CharacterModules[Style].Move1(Move1Time)
 end)

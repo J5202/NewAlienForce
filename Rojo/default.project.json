@@ -43,7 +43,19 @@
         "InvokeTopBar": {
           "$className": "RemoteFunction"
         }
-      }
+      },
+      "BindableEvents": {
+        "$className": "Folder",
+        "Reset": {
+          "$className": "BindableEvent"
+        } 
+      },
+      "BindableFunctions": {
+        "$className": "Folder",
+        "ResetForCharacterSwitch": {
+          "$className": "BindableFunction"
+        }
+      } 
     },
 
     "ServerScriptService": {

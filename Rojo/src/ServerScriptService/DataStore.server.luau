@@ -9,6 +9,10 @@ game:GetService("Players").PlayerAdded:Connect(function(player:Player)
     if PlayerStyle then 
         local Style = player:WaitForChild("Style", 120)
         Style.Value = PlayerStyle
+    else
+        warn("No style data found for player: "..player.Name)
+        local Style = player:WaitForChild("Style", 120)
+        Style.Value = "HeatBlast" -- Default style
     end
     
 end)

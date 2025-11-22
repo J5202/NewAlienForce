@@ -1,6 +1,7 @@
 local Icon = require(script.Parent:WaitForChild("topbarplus"))
 
 local ChangeCharacterEvent = game.ReplicatedStorage.RemoteEvents.ChangeStyle
+local ResetForCharacterSwitchEvent = game.ReplicatedStorage.BindableFunctions.ResetForCharacterSwitch
 
 local FireMan = Icon.new()
 FireMan:autoDeselect(true)
@@ -8,9 +9,13 @@ FireMan:debounce(1)
 FireMan:bindEvent("selected", function()
 	task.delay(0.01, function()
 		FireMan:deselect()
-		print("Selected")
 	end)
-	ChangeCharacterEvent:FireServer("HeatBlast")
+	local CanReset = ResetForCharacterSwitchEvent:Invoke()
+	if CanReset == false then
+		return
+	else 
+		ChangeCharacterEvent:FireServer("HeatBlast")
+	end
 end)
 FireMan:setEnabled(true)
 FireMan:setName("HeatBlast")
@@ -21,9 +26,14 @@ RedMan:autoDeselect(true)
 RedMan:debounce(1)
 RedMan:bindEvent("selected", function()
 	task.delay(0.01, function()
-		ChangeCharacterEvent:FireServer("FourArms")
 		RedMan:deselect()
 	end)
+	local CanReset = ResetForCharacterSwitchEvent:Invoke()
+	if CanReset == false then
+		return
+	else
+		ChangeCharacterEvent:FireServer("FourArms")	
+	end
 end)
 RedMan:setEnabled(true)
 RedMan:setName("FourArms")
