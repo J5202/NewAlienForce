@@ -50,7 +50,7 @@ function module:IsAttackerInfront(attackerRoot, defenderRoot)
 
 	-- dot > 0 means attacker is in front (within 180°)
 	-- dot > 0.5 means roughly within a 90° front cone
-	return dot > 0.5
+	return dot > 0
 end
 
 return module

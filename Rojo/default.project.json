@@ -29,6 +29,9 @@
         "SetMove1ClickableMobile": {
           "$className" : "RemoteEvent"
         },
+        "SetEarlyAccessResetability":{
+          "$className":"RemoteEvent"
+        },
         "PlayMoveAnimation" :{
           "$className" : "RemoteEvent"
         },
@@ -60,12 +63,18 @@
         "$className": "Folder",
         "Reset": {
           "$className": "BindableEvent"
+        },
+        "ResetFromEarlyAccess":{
+          "$className": "BindableEvent"
         }
       },
       "BindableFunctions": {
         "$className": "Folder",
         "ResetForCharacterSwitch": {
           "$className": "BindableFunction"
+        },
+        "SignalEarlyAccessGamePass":{
+          "$className" : "BindableFunction"
         }
       } 
     },

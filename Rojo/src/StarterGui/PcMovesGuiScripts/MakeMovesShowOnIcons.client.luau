@@ -1,4 +1,4 @@
-local PcMovesGui = game.Players.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("PcMovesGui", 5)
+local PcMovesGui = game.Players.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("PcMovesGui", 20)
 local CharacterMoves = require(game.Players.LocalPlayer.PlayerGui.CharactersMoves)
 
 local Holder = PcMovesGui:WaitForChild("Holder", 5)

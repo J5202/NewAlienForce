@@ -2,6 +2,8 @@ local Icon = require(script.Parent:WaitForChild("topbarplus"))
 
 local ChangeCharacterEvent = game.ReplicatedStorage.RemoteEvents.ChangeStyle
 local ResetForCharacterSwitchEvent = game.ReplicatedStorage.BindableFunctions.ResetForCharacterSwitch
+local SignalEarlyAccessGamepass:BindableFunction = game.ReplicatedStorage.BindableFunctions.SignalEarlyAccessGamePass
+local SetEarlyAccessResetability:RemoteEvent = game.ReplicatedStorage.RemoteEvents.SetEarlyAccessResetability
 
 local FireMan = Icon.new()
 FireMan:autoDeselect(true)
@@ -45,8 +47,24 @@ local SpeedMan = Icon.new()
 SpeedMan:setName("XLR8")
 SpeedMan:setLabel("Speed Man")
 SpeedMan:setImage("rbxassetid://70977876464174", "Deselected")
+SpeedMan:bindEvent("selected", function()
+	SpeedMan:deselect()
+	local CanReset = ResetForCharacterSwitchEvent:Invoke()
+	if CanReset == false then
+		return
+	else
+		local HasEarlyAccess = SignalEarlyAccessGamepass:Invoke(1606980144)
+		if HasEarlyAccess then
+			ChangeCharacterEvent:FireServer("XLR8")
+		end
+	end
+end)
 
-module = {
+SetEarlyAccessResetability.OnClientEvent:Connect(function()
+	ChangeCharacterEvent:FireServer("XLR8")
+end)
+
+local module = {
     FireMan = FireMan,
     RedMan = RedMan,
 	SpeedMan = SpeedMan

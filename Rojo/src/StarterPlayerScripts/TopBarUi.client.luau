@@ -7,7 +7,7 @@ InvokeTopBar.OnClientInvoke = function()
     local CharactersList = {
         Characters.FireMan,
         Characters.RedMan,
-        Character.SpeedMan
+        Characters.SpeedMan
     }
 
     local Emotes = Icon.getIcon("Emotes")
